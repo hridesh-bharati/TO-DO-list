@@ -12,6 +12,13 @@
         .hidden {
             display: none;
         }
+
+        #listA div {
+            margin-bottom: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 
 </head>
@@ -22,13 +29,13 @@
         <button onclick="ADD()" class="btn px-3 mx-2 bg-primary"><i
                 class="bi bi-plus-circle-fill text-white h2"></i></button><br />
     </div>
-    <p id="listA"></p>
+    <p id="listA" class="p-4 m3"></p>
     <script>
         function ADD() {
             var data = document.getElementById("idata").value
             var button = document.getElementById("button")
-            document.getElementById("listA").innerHTML += `<div class="d-flex justify-content-between container m-6 bg-primary-subtle">
-            <h2 onclick="this.style.display='none'"> ${data} </h2> 
+            document.getElementById("listA").innerHTML += `<div class="d-flex justify-content-between container m-6 shadow-lg p-2">
+            <h2> ${data} </h2> 
             <button type="button" class="m-1 btn bg-transparent" onclick="removed(this)"><i class="bi bi-trash3-fill text-danger fs-4"></i></button>
             </div>
             `
